@@ -1,0 +1,74 @@
+package cn.handyplus.guild.sql;
+
+public final class SqlTemplates {
+    private SqlTemplates() {
+    }
+
+    public static final String SELECT = "SELECT ";
+    public static final String INSERT_INTO = "INSERT INTO ";
+    public static final String UPDATE = "UPDATE ";
+    public static final String DELETE_FROM = "DELETE FROM ";
+    public static final String SET = " SET ";
+    public static final String FROM = " FROM ";
+    public static final String VALUES = " VALUES ";
+    public static final String NOT_NULL = "NOT NULL";
+    public static final String AUTO_INCREMENT = " AUTO_INCREMENT";
+    public static final String DEFAULT_VALUE = " DEFAULT '%s'";
+    public static final String COLUMN_COMMENT = " COMMENT '%s'";
+    public static final String PARAMETER = "?";
+    public static final String ASSIGN = " = ";
+    public static final String SUBTRACT = " - ";
+    public static final String ADD = " + ";
+    public static final String IDENTIFIER_QUOTE = "`";
+    public static final String STRING_QUOTE = "'";
+    public static final String OPEN_PAREN = "(";
+    public static final String CLOSE_PAREN = ")";
+    public static final String WILDCARD = "%";
+    public static final String COMMA = " , ";
+    public static final String COUNT_ALL = "COUNT(*)";
+    public static final String COUNT_DISTINCT = "COUNT(DISTINCT `%s`)";
+    public static final String WHERE_ALL = " where 1 = 1";
+    public static final String MYSQL_RANDOM_ORDER = " ORDER BY RAND()";
+    public static final String SQLITE_RANDOM_ORDER = " ORDER BY RANDOM()";
+    public static final String SQLITE_CREATE_TABLE = "CREATE TABLE IF NOT EXISTS `%s` ( `id` INTEGER PRIMARY KEY AUTOINCREMENT);";
+    public static final String SQLITE_TABLE_INFO = "PRAGMA table_info ( %s )";
+    public static final String SQLITE_ADD_COLUMN = "ALTER TABLE '%s' ADD '%s' %s(%s) %s;";
+    public static final String MYSQL_CREATE_TABLE = "CREATE TABLE IF NOT EXISTS `%s` (`id` INTEGER (11) AUTO_INCREMENT,PRIMARY KEY (`id`)) CHARACTER SET = utf8mb4 ENGINE=INNODB;";
+    public static final String MYSQL_TABLE_COMMENT = "ALTER TABLE `%s` COMMENT '%s';";
+    public static final String MYSQL_COLUMN_NAMES = "SELECT column_name FROM information_schema.COLUMNS WHERE table_name = '%s' AND table_schema = '%s';";
+    public static final String MYSQL_ADD_COLUMN = "ALTER TABLE `%s` ADD `%s` %s(%s) %s;";
+    public static final String MYSQL_MODIFY_COLUMN = "ALTER TABLE `%s` MODIFY `%s` %s(%s) %s;";
+    public static final String MYSQL_INDEX_LIST = "SHOW INDEX FROM %s;";
+    public static final String MYSQL_ADD_INDEX = "ALTER TABLE %s ADD INDEX %s (%s);";
+    public static final String AND = " AND ";
+    public static final String OR = " OR ";
+    public static final String IN = " IN ";
+    public static final String NOT_IN = " NOT IN ";
+    public static final String NOT = " NOT ";
+    public static final String LIKE = " LIKE ";
+    public static final String NOT_LIKE = " NOT LIKE ";
+    public static final String EQUALS = " = ";
+    public static final String NOT_EQUALS = " <> ";
+    public static final String GREATER_THAN = " > ";
+    public static final String LESS_THAN = " < ";
+    public static final String GREATER_OR_EQUAL = " >= ";
+    public static final String LESS_OR_EQUAL = " <= ";
+    public static final String IS_NULL = " IS NULL ";
+    public static final String IS_NOT_NULL = " IS NOT NULL ";
+    public static final String GROUP_BY = " GROUP BY ";
+    public static final String LIMIT = " LIMIT ";
+    public static final String OFFSET = " OFFSET ";
+    public static final String HAVING = " HAVING ";
+    public static final String ORDER_BY = " ORDER BY ";
+    public static final String EXISTS = " EXISTS ";
+    public static final String BETWEEN = " BETWEEN ";
+    public static final String ASC = " ASC ";
+    public static final String DESC = " DESC ";
+    public static final String MYSQL_ADD_UNIQUE_INDEX = "ALTER TABLE %s ADD UNIQUE INDEX %s (%s);";
+    public static final String SQLITE_CREATE_INDEX = "CREATE INDEX IF NOT EXISTS `%s` ON `%s` (%s);";
+    public static final String SQLITE_CREATE_UNIQUE_INDEX = "CREATE UNIQUE INDEX IF NOT EXISTS `%s` ON `%s` (%s);";
+    public static final String MYSQL_DELETE_DUPLICATES = "DELETE newer FROM %1$s newer JOIN %1$s older ON %2$s AND older.`id` < newer.`id`;";
+    public static final String SQLITE_DELETE_DUPLICATES = "DELETE FROM %1$s AS newer WHERE EXISTS (SELECT 1 FROM %1$s older WHERE %2$s AND older.`id` < newer.`id`);";
+    public static final String MYSQL_DROP_INDEX = "DROP INDEX `%s` ON `%s`;";
+    public static final String SQLITE_DROP_INDEX = "DROP INDEX `%s`;";
+}

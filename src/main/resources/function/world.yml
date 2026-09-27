@@ -1,0 +1,98 @@
+# 公会世界需要前置插件 Multiverse-Core
+
+# 世界环境 默认: NORMAL  地狱: NETHER  末地: THE_END
+environment: NORMAL
+
+# 世界类型 默认: NORMAL 超平坦: FLAT 巨型生物群系: LARGE_BIOMES 放大化: AMPLIFIED
+worldType: FLAT
+
+# 是否生成建筑
+generateStructures: true
+
+# 世界模式 和平: PEACEFUL ; 简单: EASY ; 正常: NORMAL ; 困难: HARD
+difficulty: PEACEFUL
+
+# 是否可以pvp
+PVPMode: true
+
+# 在公会世界内是否可以飞行
+fly: false
+
+# 世界出生点是否内存常驻
+keepSpawnInMemory: false
+
+# 非公会成员是否禁止传送到公会世界
+notGuildPlayerTp: true
+
+# 世界种子
+seedString: ''
+
+# 自定义生成器
+customGenerator: ''
+
+# 世界名称格式 ${playerName} 玩家名 ${playerUuid} 玩家 uid ${dateTime} 年月日时分秒
+worldName: '${playerName}_${dateTime}'
+
+# 多世界默认别名 ${guildName} 为公会名
+aliasName: '${guildName}'
+
+# 世界规则 可查阅 https://minecraft.fandom.com/zh/wiki/%E5%91%BD%E4%BB%A4/gamerule
+# commandBlockOutput  启用/禁止命令执行时命令列中的进行文字提示
+# doFireTick          启用／禁止火的蔓延
+# doMobLoot			启用／禁止生物掉落物
+# doMobSpawning		启用／禁止生物生成【既有生物、刷怪蛋不受影响】
+# doTileDrops			启用／禁止方块被任何方式破坏时掉落物品【包括TNT破坏的】
+# keepInventory		启用／禁止死亡后对物品栏的保存
+# mobGriefing			启用／禁止所有怪物对方块的破坏【包含苦力怕、安德、地狱幽灵、凋零怪】【TNT不在此限】
+# naturalRegeneration 启用/禁用自然生命恢复
+# doDaylightCycle     启用/禁用日夜交替【关闭的话时间会停止】
+# 注意 高版本中部分规则名称可能变为下划线名称例如: keepInventory -> keep_inventory
+gameRule:
+  # 要设置为true的规则
+  trueFlag:
+    - 'keep_inventory'
+  # 要设置为false的规则
+  falseFlag:
+    - 'mob_griefing'
+
+# 重复创建提醒
+HasBeenCreated: '&4已经创建公会世界过了 请不要重复创建.'
+
+# 公会世界边境设置选择 类型: minecraft 原版边境  WorldBorder 依赖插件
+borderType: 'minecraft'
+
+# 是否开启 Residence 自动创建/同步公会世界领地
+residence: true
+
+# 公会世界边境设置 1:为等级，可以按照顺序无限扩展, minecraft类型识别: x坐标 WorldBorder类型识别: x和z
+guildSetting:
+  1:
+    x: 100
+    z: 100
+  2:
+    x: 200
+    z: 200
+  3:
+    x: 300
+    z: 300
+  4:
+    x: 400
+    z: 400
+  5:
+    x: 500
+    z: 500
+  6:
+    x: 600
+    z: 600
+  7:
+    x: 700
+    z: 700
+  8:
+    x: 800
+    z: 800
+  9:
+    x: 900
+    z: 900
+  10:
+    x: 1000
+    z: 1000

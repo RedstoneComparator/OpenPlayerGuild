@@ -1,0 +1,91 @@
+# 公会称号需要前置插件 PlayerTitle
+title: '&0公会称号'
+size: 27
+
+# 是否启用 true开启，false关闭
+enable: true
+
+# buff类型 目前只支持 attribute_plus 或 sx_attribute 或 AttributeSystem 或 MythicLib
+buffType: 'attribute_plus'
+# 称号描述
+description:
+  - '&a ${guild_name} &7公会专属称号'
+
+# 称号应用类型 wear:佩戴 collect:收集
+applyType: 'wear'
+
+# 公会称号设置 1:为等级，可以按照顺序无限扩展
+1:
+  # 称号名称
+  title: '&f[ &7${guild_name}%playerGuild_role% &f]'
+  # buff属性配置
+  buff: []
+  # 显示配置 有配置display根据display显示，没有配置根据buff显示
+  # 如果要配置，请务必配置的跟buff行数一致! PlayerTitle 3.5.3+支持display
+  display: []
+2:
+  title: '&f[ &a${guild_name}%playerGuild_role% &f]'
+  buff: []
+3:
+  title: '&f[ &e${guild_name}%playerGuild_role% &f]'
+  buff: []
+4:
+  title: '&f[ &e${guild_name}%playerGuild_role% &f]'
+  buff: []
+5:
+  title: '&f[ &e${guild_name}%playerGuild_role% &f]'
+  buff: []
+6:
+  title: '&f[ &e${guild_name}%playerGuild_role% &f]'
+  buff: []
+7:
+  title: '&f[ &e${guild_name}%playerGuild_role% &f]'
+  buff: []
+8:
+  title: '&f[ &e${guild_name}%playerGuild_role% &f]'
+  buff: []
+9:
+  title: '&f[ &e${guild_name}%playerGuild_role% &f]'
+  buff: []
+10:
+  title: '&f[ &e${guild_name}%playerGuild_role% &f]'
+  buff: []
+
+# 当前公会称号显示
+now:
+  index: 11
+  material: NAME_TAG
+  name: '&a当前称号: ${nowTitleName}'
+  custom-model-data: 0
+  sound: ''
+# 下级公会称号显示
+next:
+  index: 15
+  material: NAME_TAG
+  name: '&a下级称号: ${nextTitleName}'
+  custom-model-data: 0
+  sound: ''
+
+# 返回按钮
+back:
+  enable: true
+  index: 22
+  material: PLAYER_HEAD
+  headBase: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllYTFkODYyNDdmNGFmMzUxZWQxODY2YmNhNmEzMDQwYTA2YzY4MTc3Yzc4ZTQyMzE2YTEwOThlNjBmYjdkMyJ9fX0='
+  name: '   &8[&a返回&8]'
+  lore:
+    - '&f- &7点击返回'
+  custom-model-data: 0
+
+# 自定义按钮 你可以在这无限扩展你想要的按钮，格式跟这个例子返回一样就好
+custom:
+  # 分隔板
+  pane:
+    enable: true
+    index: 0,1,2,3,4,5,6,7,8,9,17,18,19,20,21,23,24,25,26
+    material: black_stained_glass_pane
+    isEnchant: false
+    name: '        &8[&7分割板&8]'
+    lore:
+      - '&7哎呀,不要随便戳人家啦'
+    custom-model-data: 0

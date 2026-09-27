@@ -1,0 +1,66 @@
+# 称号buff状态 true 进行清理 false不处理
+playerTitleBuff: true
+playerTitleBuffOnMsg: '&8[&a✔&8] &7称号buff 恢复'
+playerTitleBuffOffMsg: '&8[&a✔&8] &7称号buff 隐藏'
+
+# 玩家种族加成 true 进行清理 false不处理
+playerRaceBuff: true
+playerRaceBuffOnMsg: '&8[&a✔&8] &7种族之力 恢复'
+playerRaceBuffOffMsg: '&8[&a✔&8] &7种族之力 隐藏'
+
+# 药水加成 true 进行清理 false不处理
+potionEffectBuff: true
+potionEffectBuffOnMsg: '&8[&a✔&8] &7药水加成 移除'
+
+# 公平装备-统一皮革套 mc1.9+开始生效
+# 可使用指令/plg setEquipment (装备部位) 来设置，不传装备部位默认放背包
+equipment: true
+# 是否开启默认装备-皮革套，苹果64，弓1，箭64，石斧1
+defaultEquipment: true
+# 登录获取装备延迟
+loginEquipmentDelay: 1
+
+# 公会战状态禁止使用的指令
+disabledCommand: true
+
+# 公会战状态禁止传送
+disabledTeleport: true
+
+# 公会战禁止Adapt技能 true开启
+adapt: false
+adaptOnMsg: '&8[&a✔&8] &7Adapt技能 恢复'
+adaptOffMsg: '&8[&a✔&8] &7Adapt技能 隐藏'
+
+# 可执行的白名单指令
+whiteCommand:
+  - 'login'
+  - 'l'
+  - 'plgs shop'
+
+
+# 公会战开战后默认最大血量(请不要在非原版服开启该功能)
+maxHealth:
+  # 是否开启 true开启
+  enable: false
+  health: 20
+
+# 禁止飞行
+banFly: true
+
+# 自动收回MyPet的宠物
+banMyPet: true
+
+# 公会战开始后强制玩家执行的命令 (例如使用指令取消其他加成)
+performCommand:
+  # 是否开启 true开启
+  enable: false
+  # 要执行的命令 可使用变量 ${player}代表玩家名
+  # 前面加 [Console] 代表控制台执行命令
+  command:
+    - '[Console] psa ${player}'
+
+# 公会战禁止命令提醒
+disabledCommandMsg: '&a正在进行公会战,你无法使用该命令'
+# 数据库备份装备还原提醒
+noItem: '&a该玩家没有可还原的装备'
+restore: '&a该玩家备份装备已放在你背包'

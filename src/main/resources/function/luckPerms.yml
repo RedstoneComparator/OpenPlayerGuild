@@ -1,0 +1,7 @@
+# 需前置 LuckPerms才会生效
+
+# 是否启用 true 开启，false 关闭
+enable: false
+
+# 公会权限组名称 可自定义 ${id} 公会ID 可使用/plg look 公会名 来查看公会唯一ID
+groupName: 'PlayerGuild_${id}'

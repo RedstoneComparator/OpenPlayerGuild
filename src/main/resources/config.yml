@@ -1,0 +1,249 @@
+# 本插件gui语言排版出自小羊咩咩～
+
+# 跨服传送标识-每个服必须跟bc里配置的一样(BC服必须先配置完这个,才能跨服)
+serverName: 'server'
+
+# 公会默认logo
+defaultLogo: APPLE
+# spawn传送延迟时间(单位秒)
+delayTime: 3
+# spawn传送等待时间(单位秒)
+waitTime: 3
+
+# 离开公会后重新加入公会的冷却时间 单位 小时
+joinCooling: 3
+
+# 没有公会玩家登录后进行提醒
+noGuildRemind: true
+
+# 申请加入公会变量判断 玩家申请/会长邀请加入,判断该变量是否跟会长一致判断
+joinPapi: ''
+
+# 没公会时候显示名
+default: '&7无公会'
+# 公会变量 %playerGuild_show_name% 默认前缀
+prefixBrackets: '&f['
+# 公会变量 %playerGuild_show_name% 默认后缀
+suffixBrackets: '&f]'
+
+# 是否开启加载公会成员头颅
+setHead: true
+# 是否开启open中默认公会logo头颅加载会长皮肤
+setDefaultHead: true
+
+# open指令默认排序字段 填错或不填则使用 prosperity_degree
+# prosperity_degree        公会活跃
+# level                    公会等级
+# money                    公会资金
+# create_time              创建时间
+# member_count             公会人数
+# month_prosperity_degree  月度活跃
+openDefaultSort: 'prosperity_degree'
+
+# 公会战结束模式 default:回到玩家比赛开始前位置 lookLocation:回到观站点 spawn:回到主城
+# 不填上面三种类型 例如: pvpEndModel: "suicide" 效果是玩家执行这个 suicide 指令
+pvpEndModel: 'default'
+
+# 每日全量备份数据到backUp目录
+backUp: false
+# 备份时间
+backUpTime: '00:00'
+
+# 离开公会后依然保留玩家公会数据
+levelSavePlayerData: false
+
+# 是否开启离线玩家数据缓存
+isOfflinePapiCache: true
+
+# 是否开启公会月度活跃清理,群组服 MYSQL 情况下只在一个服开启
+monthClear: true
+
+# 语言文件 [可选 中文简体:zh_CN]
+# 第一次修改语言文件,需重启生效
+language: zh_CN
+
+# 公会设置 1:为等级，可以按照顺序无限扩展
+guildSetting:
+  # 1级
+  1:
+    # 公会人数上限
+    totalNumber: 5
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 1000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 1000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 2
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    # 注意:如果有多个子服，记得只在一个服设置大于0，避免每个子服都扣一遍
+    maintenanceMoney: 10
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    # 注意:如果有多个子服，记得只在一个服设置大于0，避免每个子服都扣一遍
+    maintenanceActive: 10
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  2:
+    # 公会人数上限
+    totalNumber: 7
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 2000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 2000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 3
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 20
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 20
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  3:
+    # 公会人数上限
+    totalNumber: 10
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 10000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 5000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 5
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 30
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 30
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  4:
+    # 公会人数上限
+    totalNumber: 13
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 20000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 10000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 6
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 40
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 40
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  5:
+    # 公会人数上限
+    totalNumber: 15
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 40000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 20000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 7
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 50
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 50
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  6:
+    # 公会人数上限
+    totalNumber: 18
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 60000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 40000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 9
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 50
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 50
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  7:
+    # 公会人数上限
+    totalNumber: 20
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 80000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 80000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 10
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 100
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 100
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  8:
+    # 公会人数上限
+    totalNumber: 23
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 100000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 100000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 11
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 300
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 300
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  9:
+    # 公会人数上限
+    totalNumber: 25
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 150000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 150000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 13
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 500
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 500
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  10:
+    # 公会人数上限
+    totalNumber: 30
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 200000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 200000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 15
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 1000
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 1000
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  11:
+    # 公会人数上限
+    totalNumber: 50
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 1000000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 1000000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 25
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 5000
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 5000
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''
+  12:
+    # 公会人数上限
+    totalNumber: 100
+    # 公会升级需求公会资金-升级后会扣除处理
+    upMoney: 10000000
+    # 公会升级需求公会活跃-达标才能进行升级
+    upProsperityDegree: 10000000
+    # 公会升级需求成员数量-达标才能进行升级(设置为0为不限制)
+    upMember: 100
+    # 公会每日维护资金(每日00:00 按照(公会人数 * 维护资金)从公会资金里扣除)
+    maintenanceMoney: 10000
+    # 公会每日维护活跃(每日00:00 按照(公会人数 * 维护活跃)从公会活跃里扣除)
+    maintenanceActive: 10000
+    # 自动拼接到公会名前的颜色代码
+    nameColor: ''

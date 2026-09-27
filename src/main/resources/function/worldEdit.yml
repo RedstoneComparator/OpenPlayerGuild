@@ -1,0 +1,15 @@
+# 最低版本要求 WorldEdit.7.x+
+
+# 是否启用 true 开启，false 关闭
+enable: false
+
+# WorldEdit文件名称( schem文件 放在 function 文件夹里即可)
+schemName: spawn.schem
+
+# 自定义WorldEdit文件生成位置, 默认公会初始化坐标都为 0,-60-0
+customLocation:
+  # 是否启用 true 开启，false 关闭
+  enable: false
+  x: 0
+  y: -60
+  z: 0

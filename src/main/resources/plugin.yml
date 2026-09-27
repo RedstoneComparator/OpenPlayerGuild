@@ -1,0 +1,204 @@
+name: PlayerGuild
+main: cn.handyplus.guild.PlayerGuild
+version: 2.21.3
+author: handy
+website: https://ricedoc.handyplus.cn/wiki/PlayerGuild/log/
+api-version: 1.13
+softdepend: [ PlaceholderAPI, PlayerTitle, PlayerTask, Multiverse-Core, WorldBorder, Vault, PlayerPoints, PlayerRace, WorldEdit, AttributePlus, SX-Attribute, AttributeSystem, PlayerChat, Adapt, MythicLib, MMOItems, PlayerCurrency, MyPet, LEconomy, CMI, LuckPerms, MonsterAPI, AttributeMM, AuthMe, CatSeedLogin, OauthLogin, PlayerScoreboard, CMI, DecentHolograms, FancyHolograms, HolographicDisplays, Residence, Worlds ]
+folia-supported: true
+description: 一个有点好用的玩家公会插件
+commands:
+  playerGuild:
+    description: 玩家公会插件
+    aliases: [ plg ]
+permissions:
+  playerGuild.*:
+    description: 玩家公会插件
+    children:
+      playerGuild.reload: true
+      playerGuild.create: true
+      playerGuild.addLogo: true
+      playerGuild.addShop: true
+      playerGuild.setLocation: true
+      playerGuild.view: true
+      playerGuild.spawn: true
+      playerGuild.setSpawn: true
+      playerGuild.createWorld: true
+      playerGuild.up: true
+      playerGuild.leave: true
+      playerGuild.dissolve: true
+      playerGuild.accept: true
+      playerGuild.deny: true
+      playerGuild.acceptPvp: true
+      playerGuild.denyPvp: true
+      playerGuild.editGuildName: true
+      playerGuild.getIp: true
+      playerGuild.restore: true
+      playerGuild.give: true
+      playerGuild.set: true
+      playerGuild.take: true
+      playerGuild.refresh: true
+      playerGuild.reward: true
+      playerGuild.clear: true
+      playerGuild.acceptInvitation: true
+      playerGuild.denyInvitation: true
+      playerGuild.create.color: true
+      playerGuild.setEquipment: true
+      playerGuild.signIn: true
+      playerGuild.look: true
+      playerGuild.start: true
+      playerGuild.convert: true
+      playerGuild.me: true
+      playerGuild.giveLogo: true
+      playerGuild.setDefaultLogo: true
+      playerGuild.editDescription: true
+      playerGuild.join: true
+      playerGuild.channel: true
+      playerGuild.adminCreate: true
+      playerGuild.adminEditGuildName: true
+      playerGuild.setRole: true
+      playerGuild.invitation: true
+      playerGuild.adminUp: true
+      playerGuild.delWorld: true
+      playerGuild.stop: true
+  playerGuild.reload:
+    description: 重新加载配置
+    default: op
+  playerGuild.create:
+    description: 创建
+    default: true
+  playerGuild.addLogo:
+    description: 添加可购买logo
+    default: op
+  playerGuild.addShop:
+    description: 添加公会商店物品
+    default: op
+  playerGuild.setLocation:
+    description: 设置pvp场地
+    default: op
+  playerGuild.view:
+    description: 管理员进行查看信息
+    default: op
+  playerGuild.spawn:
+    description: 回去公会主城
+    default: true
+  playerGuild.setSpawn:
+    description: 设置公会主城
+    default: true
+  playerGuild.createWorld:
+    description: 创建公会世界
+    default: true
+  playerGuild.up:
+    description: 升级公会
+    default: true
+  playerGuild.leave:
+    description: 离开公会
+    default: true
+  playerGuild.dissolve:
+    description: 解散公会
+    default: op
+  playerGuild.accept:
+    description: 同意加入公会
+    default: true
+  playerGuild.deny:
+    description: 拒绝加入公会
+    default: true
+  playerGuild.open:
+    description: 打开公会列表
+    default: true
+  playerGuild.acceptPvp:
+    description: 同意加入公会战
+    default: true
+  playerGuild.denyPvp:
+    description: 拒绝加入公会战
+    default: true
+  playerGuild.editGuildName:
+    description: 修改公会名称
+    default: true
+  playerGuild.getIp:
+    description: 获取mac地址
+    default: op
+  playerGuild.restore:
+    description: 获取装备
+    default: op
+  playerGuild.give:
+    description: 给贡献
+    default: op
+  playerGuild.set:
+    description: 设置贡献
+    default: op
+  playerGuild.take:
+    description: 拿走贡献
+    default: op
+  playerGuild.refresh:
+    description: 刷新
+    default: op
+  playerGuild.reward:
+    description: 补发奖励
+    default: op
+  playerGuild.clear:
+    description: 清理数据
+    default: op
+  playerGuild.acceptInvitation:
+    description: 同意邀请
+    default: true
+  playerGuild.denyInvitation:
+    description: 拒绝邀请
+    default: true
+  playerGuild.create.color:
+    description: 彩色公会名
+    default: op
+  playerGuild.setEquipment:
+    description: 设置装备
+    default: op
+  playerGuild.signIn:
+    description: 签到
+    default: op
+  playerGuild.look:
+    description: 查看
+    default: op
+  playerGuild.start:
+    description: 立即开始赛季公会战
+    default: op
+  playerGuild.convert:
+    description: 转化数据库
+    default: op
+  playerGuild.me:
+    description: 打开我的公会
+    default: true
+  playerGuild.giveLogo:
+    description: 给公会logo
+    default: op
+  playerGuild.setDefaultLogo:
+    description: 设置公会默认logo
+    default: op
+  playerGuild.editDescription:
+    description: 设置公会描述
+    default: true
+  playerGuild.join:
+    description: 指令申请加入
+    default: true
+  playerGuild.channel:
+    description: 切换到公会聊天频道
+    default: true
+  playerGuild.adminCreate:
+    description: OP创建公会
+    default: op
+  playerGuild.adminEditGuildName:
+    description: OP修改公会名
+    default: op
+  playerGuild.setRole:
+    description: 设置公会成员角色
+    default: op
+  playerGuild.invitation:
+    description: 指令邀请加入
+    default: true
+  playerGuild.adminUp:
+    description: 升级公会等级
+    default: op
+  playerGuild.delWorld:
+    description: 删除公会世界
+    default: op
+  playerGuild.stop:
+    description: 强制结束进行的公会战
+    default: op

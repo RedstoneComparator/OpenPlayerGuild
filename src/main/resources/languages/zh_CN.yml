@@ -1,0 +1,207 @@
+# 没权限时候提醒
+noPermission: '&c你没有权限执行此命令...'
+
+# 重载插件提醒
+reloadMsg: '&a公会重载完毕...'
+
+# placeholderAPI提醒
+placeholderAPISucceedMsg: '&a已成功加载placeholderApi'
+placeholderAPIFailureMsg: '&7你的服务端没有安装PlaceholderApi哦 未启用自定义变量功能.'
+
+# playerTitle提醒
+playerTitleSucceedMsg: '&a已成功加载PlayerTitle 启用公会称号功能.'
+playerTitleFailureMsg: '&7你的服务端没有安装PlayerTitle 未启用公会称号功能.'
+
+# playerTask提醒
+playerTaskSucceedMsg: '&a已成功加载playerTask 启用公会任务功能.'
+playerTaskFailureMsg: '&7你的服务端没有安装playerTask 未启用公会任务功能.'
+
+# playerRace提醒
+playerRaceSucceedMsg: '&a已成功加载playerRace 兼容种族功能.'
+playerRaceFailureMsg: '&7你的服务端没有安装playerRace 未兼容种族功能.'
+
+# multiverseCore提醒
+multiverseCoreSucceedMsg: '&a已成功加载MultiverseCore 启用公会基地功能.'
+multiverseCoreFailureMsg: '&7你的服务端没有安装MultiverseCore 未启用公会基地功能.'
+
+# Worlds提醒
+worldsFailureMsg: '&7Worlds创建公会世界失败,请检查Worlds插件和世界配置.'
+
+# 删除公会世界提醒
+delWorldEmptyMsg: '&7该公会没有创建公会世界.'
+delWorldSucceedMsg: '&8[&a✔&8] &7已删除公会&a${guildName}&7的公会世界.'
+
+# worldBorder提醒
+worldBorderSucceedMsg: '&a已成功加载WorldBorder 启用公会基地边境功能.'
+worldBorderFailureMsg: '&7你的服务端没有安装WorldBorder 未启用公会基地边境功能.'
+
+# WorldEdit
+worldEditSucceedMsg: '&a已成功加载WorldEdit 启用公会基地模板功能.'
+worldEditFailureMsg: '&7你的服务端没有安装WorldEdit 未启用公会基地模板功能.'
+
+# vault提醒
+vaultSucceedMsg: '&a已成功加载Vault 启用经济相关功能.'
+vaultFailureMsg: '&7你的服务端没有安装Vault 未启用经济相关功能.'
+
+# PlayerPoints提醒
+playerPointsSucceedMsg: '&a已成功加载PlayerPoints 启用点券相关功能.'
+playerPointsFailureMsg: '&7你的服务端没有安装PlayerPoints 未启用点券相关功能.'
+
+# PlayerChat提醒
+playerChatSucceedMsg: '&a已成功加载PlayerChat 启用公会聊天频道相关功能.'
+playerChatFailureMsg: '&7你的服务端没有安装PlayerChat 未启用公会聊天频道相关功能.'
+
+# adapt提醒
+adaptSucceedMsg: '&a已成功加载adapt 兼容技能功能.'
+adaptFailureMsg: '&7你的服务端没有安装adapt 未兼容技能功能.'
+
+# PlayerCurrency提醒
+playerCurrencySucceedMsg: '&a已成功加载PlayerCurrency 启用多货币经济兼容'
+playerCurrencyFailureMsg: '&7你的服务端没有安装PlayerCurrency 未启用多货币经济兼容'
+
+# /plg help指令管理员出现的提醒
+helps:
+  - ''
+  - ' &3Player&bGuild &8▪ &7米饭出品～'
+  - ''
+  - ' &7命令: &f/Plg &8[...]'
+  - ' &7参数:'
+  - '   &8- &f reload   &7重载配置文件'
+  - '   &8- &f create &8[&7公会名&8]   &7创建一个公会'
+  - '   &8- &f open   &7打开公会界面'
+  - '   &8- &f view &8[&7类型&8]    &7管理员进行查看信息'
+  - '   &8- &f setLocation &8[&7类型&8] &8[&7场地名&8] &8[&7场地出生点名&8] &7设置公会战场地'
+  - '   &8- &f addShop &8[&7价格&8] (&7等级&8) (&7次数&8) (&7类型&8)   &7手持物品上架到公会商城'
+  - '   &8- &f addLogo &8[&7价格&8] (&7等级&8)   &7手持物品上架到公会Logo商城'
+  - '   &8- &f restore &8[&7玩家名&8]    &7用于蹦服等特殊情况获取玩家备份物品'
+  - '   &8- &f give [类型][名称][数量]    &7增加贡献'
+  - '   &8- &f take [类型][名称][数量]    &7减少贡献'
+  - '   &8- &f set [类型][名称][数量]   &7设置贡献'
+  - '   &8- &f refresh    &7刷新,用于修复公会没任务或者没称号'
+  - '   &8- &f reward task    &7补发已完成但未结算的公会任务奖励'
+  - '   &8- &f clear task    &7清理本周公会任务'
+  - '   &8- &f dissolve [名称]  &7强制解散指令名称的公会'
+  - '   &8- &f setEquipment (装备位置)  &7设置手上物品为公平公会战物品'
+  - '   &8- &f start  &7立即开始赛季公会战'
+  - '   &8- &f stop &8[&7类型&8]  &7强制结束进行的公会战'
+  - '   &8- &f convert [MySQL|SQLite]  &7转换数据'
+  - '   &8- &f giveLogo &8[&7公会名&8]  &7手持物品设置为对应公会logo'
+  - '   &8- &f setDefaultLogo      &7手持物品设置为公会默认logo'
+  - '   &8- &f channel      &7切换到公会聊天频道'
+  - '   &8- &f adminCreate &8[&7公会名&8]  &7OP创建公会'
+  - '   &8- &f adminEditGuildName &8[&7旧公会名&8] &8[&7新公会名&8]  &7OP修改公会名'
+  - '   &8- &f setRole [玩家名] [角色]  &7OP修改玩家角色'
+  - '   &8- &f delWorld &8[&7公会名&8]  &7OP删除公会世界'
+
+succeedMsg: '&a命令执行成功.'
+clearTaskSucceedMsg: '&8[&a✔&8] &7已清理公会任务&a${delNum}&7条.'
+rewardTaskEmptyMsg: '&8[&e!&8] &7没有可补发的公会任务奖励.'
+rewardTaskSucceedMsg: '&8[&a✔&8] &7已补发公会任务奖励&a${delNum}&7条.'
+failureMsg: '&c命令执行失败.'
+noPlayerFailureMsg: '&c该命令只能玩家执行.'
+noAir: '&c你的手上并没有物品.'
+typeFailureMsg: '&c类型错误.'
+paramFailureMsg: '&c参数不全,请查阅文档补全参数'
+amountFailureMsg: '&7此参数只能为大于0的数字.'
+noGuildMsg: '&4没有公会.'
+noGuildSpawnLocationMsg: '&c会长没有设置公会基地.'
+waitTime: '&7你必须等待 &a${waitTime} &7秒后 才可以继续使用该功能.'
+delayTime: '&7传送将在 &a${delayTime} &7秒后开始.'
+spawnMove: '&7你移动了位置 传送被取消了.'
+joinChannel: '&8[&a✔&8] &a你进入公会聊天频道'
+notSet: '未设置'
+
+upMember: '&7升级公会人数不足.'
+upMoney: '&7升级资金不足.'
+upProsperityDegree: '&7公会活跃度不足 不能升级.'
+createWorldMsg: '&7正在创建中,请稍等...'
+welcomeTitle: '&7欢迎 ${player} 来到公会世界.'
+oneLeaveMsg: '&7你是会长不能离开公会'
+leaveMsg: '&7你离开了 &8[&7${guild_name}&8] &7公会.'
+joinFailureMsg: '&7没有对应的公会.'
+joinApplyMsg: '&7已申请加入 &8[&7${guild_name}&8] &7公会 请耐心等待审批通过.'
+haveApplied: '&7你已经申请加入该公会了 请耐心等待审批通过.'
+joinApplyNoticeMsg: '&7玩家 &8[&a${player}&8] &7申请加入公会.'
+joinApplyCancelMsg: '&7玩家 &8[&a${player}&8] &7取消申请加入公会.'
+joinApplyRefuseMsg: '&7管理员 &8[&a${player}&8] &7拒绝了你的申请.'
+joinApplyAcceptMsg: '&7管理员 &8[&a${player}&8] &7同意了你的申请.'
+accept: '&8[&a点击接受&8]    '
+refuse: '&r      &8[&c点击拒绝&8]'
+refuseFailureMsg: '&a已经被 ${applyPlayerName} 审批过了.'
+refuseSucceedMsg: '&7已拒绝玩家 &8[&a${player}&8] &7的申请.'
+acceptSucceedMsg: '&7已同意玩家 &8[&a${player}&8] &7的申请.'
+numberFailureMsg: '&7公会人数已满 无法加入此公会.'
+noApply: '&7公会没有加入申请.'
+noJoinGuildWorld: '&7你不能进入其他公会的世界.'
+joinCoolingMsg: '&8[&c✘&8] &7操作失败，你还需要等待&a${time}小时&7才能申请加入公会'
+matePvpRewardLimitMsg: '&8[&c✘&8] &7你今日匹配公会战奖励次数已达上限，本场无法获得奖励'
+guildPvpActiveMsg: '&8[&c✘&8] &7无法操作,因为你正在参与 &a${type}'
+noGuildRemind: '&8[&a✔&8] &a你还没有公会,&8[&a点击申请加入&8]'
+noGuildSeason: '&8[&a✔&8] &7公会还没有参加赛季公会战,&8[&a点击参加&8]'
+seasonPvpLocationMsg: '第${season}赛季公会战开始,本次随机参赛场地:${location}'
+lookPvpRunningMsg: '&a当前有开始的${type}'
+lookPvpNotRunningMsg: '&a当前没有开始的${type}'
+stopSucceedMsg: '&8[&a✔&8] &7已强制结束 ${type} &7共 &a${num} &7场.'
+stopEmptyMsg: '&8[&e!&8] &7当前没有进行中的${type}.'
+noDescription: '&a暂无描述'
+noSetSpawn: '&8[&c✘&8] &7本世界禁止设置公会主城'
+copy: '&r   &8[&a点击复制&8]'
+noGuildWorld: '&8[&c✘&8] &7传送失败,你需要前往创建公会世界的服才能进行传送.'
+existGuild: '&8[&c✘&8] &7无法加入,因为你已经有公会了'
+invitationExistGuild: '&8[&c✘&8] &7无法邀请,因为玩家已经有公会了'
+invitationSucceedMsg: '&8[&a✔&8] &7邀请成功,请耐心等待玩家同意'
+tpFailureMsg: '&8[&c✘&8] &7由于第三方插件导致你的传送被阻挡,已将你传送回主城'
+impeachmentSucceedMsg: '&8[&a✔&8] &7弹劾成功,会长职位已转移给 &a${playerName}'
+impeachmentSucceedNotice: '弹劾会长公告#因为会长${one}长期不在线,现已被${player}弹劾成功,会长职位由总贡献最高玩家${successor}接任'
+impeachmentFailMsg: '&8[&c✘&8] &7弹劾失败,没有贡献度比会长更高的成员'
+impeachmentOneFailMsg: '&8[&c✘&8] &7弹劾失败,会长离线 ${offline_day} &8/ ${impeachment_day} &7天,未达到可弹劾天数'
+impeachmentActiveStatus: '&a会长活跃中'
+impeachmentStatus: '&a可弹劾'
+impeachmentYesButton: ' &8[&a✔&8] &7点击弹劾会长'
+impeachmentNoButton: ' &8[&c✘&8] &7需会长离线超过 &a${impeachment_day} &7天'
+onlinePlayerMsg: '&8[&c✘&8] &7玩家 &a${player} &7不在线'
+joinPapiMsg: '&8[&c✘&8] &7操作失败,不是同一阵营'
+signInTip: '&8[&a✔&8] &7今日公会还没有签到,&8[&a点击签到&8]'
+submitSucceedMsg: '&8[&a✔&8] &7公会任务需求物品 &a${item} &7成功提交&a${number}&7个'
+giveMsg: '&8[&a✔&8] &7成功给予玩家 &a${player} &7公会贡献:&f${amount} &7当前余额:&f${balance}'
+setMsg: '&8[&a✔&8] &7成功设置玩家 &a${player} &7公会贡献:&f${amount} &7当前余额:&f${balance}'
+takeMsg: '&8[&a✔&8] &7成功扣除玩家 &a${player} &7公会贡献:&f${amount} &7当前余额:&f${balance}'
+givePlayerMsg: '&8[&a✔&8] &7您收到了公会贡献:&f${amount} &7当前余额:&f${balance}'
+takePlayerMsg: '&8[&a✔&8] &7您减少了公会贡献:&f${amount} &7当前余额:&f${balance}'
+setPlayerMsg: '&8[&a✔&8] &7您的公会贡献被设置为:&f${amount} &7当前余额:&f${balance}'
+
+# 权限配置
+role:
+  one: '&8[&c♚&8] &d会长'
+  two: '&8[&c♕&8] &e副会'
+  three: '&8[&c♝&8] &a精英'
+  four: '&8[&7♟&8] &b成员'
+  not: '&7无职位'
+
+# 活动类型
+activityType:
+  season: '&a赛季公会战'
+  match: '&a匹配公会战'
+  score_match: '&a积分公会战'
+  stronghold: '&a据点公会战'
+
+# 用于输入指令时候tab自动提醒帮助(只建议翻译,不建议更改)
+tabHelp:
+  guildName: '请输入公会名称'
+  description: '请输入公会描述'
+  price: '请输入需要贡献值'
+  pvpName: '请输入pvp场地名'
+  spawnName: '请输入场地出生点名'
+  number: '请输入一个整数'
+  level: '请输入一个公会等级'
+  limit: '请输入可购买次数'
+  logoId: '请输入LogoId,可/plg view logo查看'
+
+# 公会排序类型
+guildSort:
+  prosperityDegree: '&a公会活跃'
+  level: '&a公会等级'
+  money: '&a公会资金'
+  createTime: '&a创建时间'
+  memberCount: '&a公会人数'
+  monthProsperityDegree: '&a月度活跃'

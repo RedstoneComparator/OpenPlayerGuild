@@ -1,0 +1,132 @@
+title: '&0公会签到'
+size: 27
+sound: ''
+
+# 点券
+point:
+  # 是否使用
+  enable: true
+  # 在gui中的坐标
+  index: 11
+  # 在gui中的名称
+  name: '   &8[&5ℑ&8] ▪ &8[&d点券签到&8]'
+  # 在gui中的材质名称
+  material: DIAMOND
+  isEnchant: true
+  # 自定义模型材质 1.14+生效 0为不生效
+  custom-model-data: 0
+  # 在gui中的lore
+  lore:
+    - ''
+    - '&8▪ &7使用&a点券&7进行签到'
+    - '&8▪ &7可获贡献值 &a#${money}'
+    - '&8▪ &7一天只可签到一次'
+    - ''
+    - '&8▪ &7需支付 &a${price} &7点券'
+    - ''
+    - '${button}'
+  # 签到价格
+  price: 10
+  # 奖励公会贡献
+  money: 100
+  # 签到成功后执行的命令
+  command:
+    - ''
+
+# 金币
+vault:
+  enable: true
+  index: 15
+  name: '   &8[&6ℑ&8] ▪ &8[&e金币签到&8]'
+  material: GOLD_INGOT
+  isEnchant: false
+  custom-model-data: 0
+  lore:
+    - ''
+    - '&8▪ &7使用&a金币&7进行签到'
+    - '&8▪ &7可获贡献值 &a#${money}'
+    - '&8▪ &7一天只可签到一次'
+    - ''
+    - '&8▪ &7需支付 &a${price} &7金币'
+    - ''
+    - '${button}'
+  # 签到价格
+  price: 100
+  # 奖励公会贡献
+  money: 50
+  # 签到成功后执行的命令
+  command:
+    - ''
+
+# 自定义货币
+ply:
+  enable: true
+  index: 13
+  material: EMERALD
+  isEnchant: false
+  name: '   &8[&6ℑ&8] ▪ &8[&e自定义货币签到&8]'
+  custom-model-data: 0
+  lore:
+    - ''
+    - '&8▪ &7使用&a${type}&7进行签到'
+    - '&8▪ &7可获贡献值 &a#${money}'
+    - '&8▪ &7一天只可签到一次'
+    - ''
+    - '&8▪ &7需支付 &a${price} &7${type}'
+    - ''
+    - '${button}'
+  # 自定义货币类型
+  type: 'point'
+  # 自定义货币签到价格
+  price: 10
+  # 奖励公会贡献
+  money: 100
+  # 签到成功后执行的命令
+  command:
+    - ''
+
+# 返回按钮
+back:
+  enable: true
+  index: 22
+  name: '   &8[&a返回&8]'
+  material: PLAYER_HEAD
+  headBase: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllYTFkODYyNDdmNGFmMzUxZWQxODY2YmNhNmEzMDQwYTA2YzY4MTc3Yzc4ZTQyMzE2YTEwOThlNjBmYjdkMyJ9fX0='
+  isEnchant: false
+  lore:
+    - '&f- &7点击返回'
+  custom-model-data: 0
+
+# 自定义按钮 你可以在这无限扩展你想要的按钮，格式跟这个例子返回一样就好
+custom:
+  # 分隔板
+  pane:
+    enable: true
+    index: 0,1,2,3,4,5,6,7,8,9,17,18,19,20,21,23,24,25,26
+    material: black_stained_glass_pane
+    isEnchant: false
+    name: '        &8[&7分割板&8]'
+    lore:
+      - '&7哎呀,不要随便戳人家啦'
+    custom-model-data: 0
+
+# ${button}对应的变量
+yesButton: ' &8[&a✔&8] &7点击进行签到'
+noButton: ' &8[&c✘&8] &7你的余额不足'
+signedInButton: ' &8[&c✔&8] &7你已经签到过了'
+
+# 签到提醒语言文件
+succeedMsg: '&a签到成功 已获得贡献:${money}'
+failureMsg: '&c签到失败'
+notMoneyFailureMsg: '&c你的余额不足 签到失败'
+
+# 奖励倍数(可无限扩展和修改子节点，权限格式: playerGuild.signIn.vip1)
+signIn:
+  # 默认无需修改
+  default: 1
+  # vip1的上限 需要权限 playerGuild.signIn.vip1
+  vip1: 1.5
+  # vip2的上限 需要权限 playerGuild.signIn.vip2
+  vip2: 2
+  # vip3的上限 需要权限 playerGuild.signIn.vip3
+  vip3: 3

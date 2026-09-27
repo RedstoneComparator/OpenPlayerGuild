@@ -1,0 +1,427 @@
+# gui标题
+title: '&0公会活动'
+# gui大小,只能9的倍数
+size: 36
+# 点击本菜单所有按钮播放的声音1.12+支持 优先级低
+# 音效列表 https://bukkit.windit.net/javadoc/org/bukkit/Sound.html
+sound: ''
+
+# 赛季公会战 热加载或者其他冲突有可能会导致无法正常开启
+# 群组服请只在一个主服开启该功能
+# 时间配置因为定时任务原因有可能会延迟/提前1分钟开启
+# 可以使用指令/plg start来立即开启
+seasonPvp:
+  # 是否使用
+  enable: true
+  # 在gui中的坐标
+  index: 11
+  # 在gui中的材质名称
+  material: GOLDEN_AXE
+  # 在gui中的名称
+  #是否附魔效果
+  isEnchant: true
+  name: '    &8[&d赛季公会战&8]'
+  # 自定义模型材质 1.14+生效 0为不生效
+  custom-model-data: 0
+  # 点击本按钮播放的声音1.12+支持 优先级高
+  # 音效列表 https://bukkit.windit.net/javadoc/org/bukkit/Sound.html
+  sound: ''
+  # 在gui中的lore
+  lore:
+    - ''
+    - '&8▪ &7第 &a${number}&7 赛季公会战'
+    - '&8▪ &7开放日期: &a周 ${startDate}'
+    - '&8▪ &7开放时间: &a${startTime}'
+    - '&8▪ &7超多奖励  拿到手软'
+    - '&8▪ &7比赛开始前可进行报名'
+    - ''
+    - '${button}'
+  # 比赛星期几,默认星期六
+  startDate: 6
+  # 比赛时间,24小时制
+  startTime: '19:00'
+  # 提醒时间,24小时制 可以多个
+  remindTime:
+    - '18:50'
+
+# 匹配公会战
+matePvp:
+  enable: true
+  index: 15
+  material: IRON_AXE
+  isEnchant: false
+  name: '    &8[&e匹配公会战&8]'
+  custom-model-data: 0
+  lore:
+    - ''
+    - '&8▪ &7匹配公会战-&a公平模式'
+    - '&8▪ &7统一属性,统一装备'
+    - '&8▪ &7随时随地 即可战斗'
+    - '&8▪ &7胜利可获得贡献奖励'
+    - '&8▪ &7开放时间内可进行报名'
+    - '&8▪ &7本周开放日: &a${startDate}'
+    - '&8▪ &7开放时间: &a${startTime}'
+    - '&8▪ &7今日剩余参与奖励次数: &a${number}'
+    - ''
+    - '${button}'
+  # 比赛时间,星期一到星期五和星期日
+  startDate: '1,2,3,4,5,7'
+  # 比赛时间,24小时制
+  startTime: '12:00~13:00'
+  # 每日参与获取奖励的次数
+  number: 10
+  # 无限火力，设置开启可无限匹配(超过奖励次数的不会发奖励)
+  unlimited: false
+  # 失败不计算次数
+  failNotCount: false
+
+# 积分匹配公会战
+scoreMatePvp:
+  # 是否开启积分公会战入口和匹配逻辑
+  enable: true
+  # 在活动GUI中的格子位置
+  index: 20
+  # 在活动GUI中显示的物品材质
+  material: DIAMOND_AXE
+  # 是否显示附魔光效
+  isEnchant: true
+  # 在活动GUI中显示的名称
+  name: '    &8[&b积分公会战&8]'
+  # 自定义模型数据, 1.14+生效, 0为不使用
+  custom-model-data: 0
+  # 在活动GUI中显示的介绍, ${button} 会替换成当前状态按钮
+  lore:
+    - ''
+    - '&8▪ &7积分公会战-&a公平模式'
+    - '&8▪ &7统一属性,统一装备'
+    - '&8▪ &7随时随地 即可战斗'
+    - '&8▪ &7每场胜利可立即获得贡献奖励'
+    - '&8▪ &7活动结束后按积分排行发额外积分奖励'
+    - '&8▪ &7本周开放日: &a${startDate}'
+    - '&8▪ &7开放时间: &a${startTime}'
+    - '&8▪ &7当前积分: &a${score}'
+    - '&8▪ &7当前排名: &a${rank} &7（前 &a${rank_percent}&7）'
+    - '&8▪ &7每轮按积分从高到低匹配'
+    - ''
+    - '${button}'
+  # 活动开放星期, 1=周一, 2=周二, 以此类推, 7=周日
+  startDate: '1,2,3,4,5,7'
+  # 比赛时间,24小时制
+  startTime: '19:00~20:00'
+  # 全量匹配间隔分钟数, 到点后按积分从高到低两两匹配
+  matchIntervalMinutes: 2
+  # 公会首次报名后获得的本轮初始积分
+  defaultScore: 100
+  # 败方按当前积分扣除百分比转移给胜方
+  transferPercent: 10
+  # 单场参与获得的积分奖励, 胜负双方都会获得, 0为不发放
+  participationScore: 10
+  # 单场胜利给参战玩家发放的贡献奖励, 0为不发放
+  winContribution: 50
+  # 单场失败给参战玩家发放的贡献奖励, 0为不发放
+  failContribution: 30
+  # 单场胜利后给参战玩家执行的命令, 支持 ${player}、${guildName}、${score}等
+  winCommand: [ ]
+
+# 据点公会战
+strongholdPvp:
+  # 是否开启据点公会战入口和匹配逻辑
+  enable: true
+  # 在活动GUI中的格子位置
+  index: 24
+  # 在活动GUI中显示的物品材质
+  material: STONE_AXE
+  # 是否显示附魔光效
+  isEnchant: true
+  # 在活动GUI中显示的名称
+  name: '    &8[&6据点公会战&8]'
+  # 自定义模型数据, 1.14+生效, 0为不使用
+  custom-model-data: 0
+  # 在活动GUI中显示的介绍, ${button} 会替换成当前状态按钮
+  lore:
+    - ''
+    - '&8▪ &7据点公会战-&a占点模式'
+    - '&8▪ &7死亡后延迟复活继续战斗'
+    - '&8▪ &7本周开放日: &a${startDate}'
+    - '&8▪ &7开放时间: &a${startTime}'
+    - '&8▪ &7当前比分: &a${score}'
+    - ''
+    - '${button}'
+  # 活动开放星期, 1=周一, 2=周二, 以此类推, 7=周日
+  startDate: '1,2,3,4,5,7'
+  # 比赛时间,24小时制
+  startTime: '20:00~21:00'
+  # 比赛持续时间,单位秒
+  time: 120
+  # 单场匹配公会数量,前 N 个点为出生点,后续点为据点
+  matchGuildSize: 2
+  # 据点判定半径
+  radius: 5
+  # 据点积分结算间隔,单位秒
+  scoreInterval: 5
+  # 每个据点每轮增加积分
+  pointScore: 1
+  # 据点边界粒子
+  particle:
+    enable: true
+    # 粒子类型,需使用当前服务端 Particle 枚举名
+    type: HAPPY_VILLAGER
+    # 每几秒刷新一次粒子边界
+    interval: 2
+    # 粒子高度偏移
+    yOffset: 0.2
+    # 粒子圆环间隔角度,越小越密集
+    stepDegree: 12
+  # 据点中心全息图
+  hologram:
+    enable: true
+    # 全息图高度偏移
+    yOffset: 2.2
+    # ${point} 为据点名
+    lines:
+      - '&8[&6据点&8]'
+      - '&a${point}'
+      - '&7比赛倒计时: &a${time} &7秒'
+      - '&7当前占领公会: &a${owner}'
+      - '&e占领排行'
+      - '${rank}'
+    # 无公会占领时显示
+    noOwner: '无'
+    # 排行行,支持 ${guild} ${time} ${score}
+    rankLine: '&7${guild} &f${time}秒 &a${score}分'
+  # 死亡后基础复活时间,每次死亡按该时间翻倍
+  respawnBaseSecond: 5
+  # 最大复活等待时间
+  respawnMaxSecond: 60
+  # 点击冷却
+  clickWait: 30
+  # 胜利方参战玩家贡献奖励
+  winContribution: 50
+  # 参与奖励,失败和平局时发放
+  participationContribution: 30
+  # 胜利方公会资金奖励
+  winGuildMoney: 0
+  # 参与公会资金奖励
+  participationGuildMoney: 0
+  # 胜利方参战玩家命令,支持 ${player}、${guildName}
+  winCommand: [ ]
+  # 参与奖励命令,支持 ${player}、${guildName}
+  participationCommand: [ ]
+  stopMsg: '&8[&c✘&8] &7当前不在据点公会战时间'
+  noMatchMsg: '&8[&c✘&8] &7据点公会战匹配超过5分钟 已停止匹配'
+  noPlayer: '&8[&c✘&8] &7据点公会战参赛人数不足 已取消本次比赛'
+  matchSuccessMsg: '&8[&a✔&8] &7据点公会战匹配成功，请等待比赛开始'
+  prepareMsg: '&7据点公会战 &a#${time} &7秒后开始，请做好战斗准备'
+  startAllMsg: '&8[&c!&8] &7${guilds} &f据点公会战开始了！'
+  scoreMsg: '&8[&6据点&8] &7当前比分: &a${scores}'
+  respawnTitle: '&8[&6据点公会战&8]'
+  respawnSubTitle: '&7复活倒计时 &a${time} &7秒'
+  winMsg: '&7据点公会战胜利 你获得了胜利奖励 &8[&a贡献×${money}&8]'
+  participationMsg: '&7据点公会战参与奖励 &8[&a贡献×${money}&8]'
+  finishMsg: '&8[&c!&8] &7${win}&7 赢得据点公会战，比分 &a${scores}'
+  drawMsg: '&8[&c!&8] &7据点公会战平局，比分 &a${scores}'
+
+# 返回按钮
+back:
+  enable: true
+  index: 31
+  name: '   &8[&a返回&8]'
+  material: PLAYER_HEAD
+  headBase: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllYTFkODYyNDdmNGFmMzUxZWQxODY2YmNhNmEzMDQwYTA2YzY4MTc3Yzc4ZTQyMzE2YTEwOThlNjBmYjdkMyJ9fX0='
+  isEnchant: false
+  lore:
+    - '&f- &7点击返回'
+  custom-model-data: 0
+
+# 自定义按钮 你可以在这无限扩展你想要的按钮，格式跟这个例子返回一样就好
+custom:
+  # 分隔板
+  pane:
+    enable: true
+    index: 0,1,2,3,4,5,6,7,8,9,17,18,26,27,28,29,30,32,33,34,35
+    material: black_stained_glass_pane
+    isEnchant: false
+    name: '        &8[&7分割板&8]'
+    lore:
+      - '&7哎呀,不要随便戳人家啦'
+    custom-model-data: 0
+
+# ${button}对应的变量
+yesButton: ' &8[&a✔&8] &7点击进行参加'
+noButton: ' &8[&a✘&8] &4公会拒绝参赛'
+stopButton: ' &8[&a✘&8] &7当前时间无法报名'
+joinButton: ' &8[&a✔&8] &a公会参加成功'
+mateButton: ' &8[&a✔&8] &7正在匹配中 用时: &a${time} &7秒'
+scoreMateButton: ' &8[&a✔&8] &7已进入积分匹配池'
+strongholdButton: ' &8[&a✔&8] &7正在匹配据点战 用时: &a${time} &7秒'
+
+# 公会战消息提醒
+mateNoMsg: '&8[&a✘&8] &7公会战匹配超过5分钟 已停止匹配'
+seasonNoMsg: '&8[&a✘&8] &7很遗憾 本届公会战没有足够公会参加 已停止举办'
+stopMsg: '&8[&a✘&8] &7今天会举办赛季PVP 不能进行报名了哦'
+matePvpStopMsg: '&8[&a✘&8] &7当前不在匹配时间'
+mateLimitMsg: '&8[&a✘&8] &7公会战匹配次数够多了,无法继续匹配'
+matePvpClickMsg: '&8[&a✘&8] &7公会战匹配点击太快,请稍等&a${time}&7秒后在参加'
+matePvpClick: 5
+scoreMatePvpStopMsg: '&8[&c✘&8] &7当前不在积分公会战时间'
+scoreMatePvpJoinMsg: '&8[&a✔&8] &7已进入积分公会战匹配池，当前积分: &a${score}'
+scoreMatePvpCancelMsg: '&8[&a✔&8] &7已取消积分公会战匹配'
+scoreMatePvpStartMsg: '&8[&c!&8] &7积分公会战已开始,请大家报名参加~'
+scoreMatePvpWaitNextMsg: '&8[&c!&8] &7积分公会战当前可匹配公会不足，已轮空等待，下一轮匹配时间: &a${time}'
+scoreMatePvpWinRewardMsg: '&7积分公会战胜利，你获得了胜场奖励 &8[&a贡献×${money}&8]'
+scoreMatePvpFailRewardMsg: '&7积分公会战失败，你获得了参与奖励 &8[&a贡献×${money}&8]'
+scoreMatePvpFinishAllMsg: '&8[&c!&8] &7${win}&7 在积分公会战中战胜了 &7${fail}&7，获得 &a${score}&7 积分，当前积分: &a${winScore}'
+scoreMatePvpFinalMsg: '&8[&c!&8] &7积分公会战已结束，排行奖励已发放'
+
+matePvpPrepareMsg: '&7匹配公会战 &a#${time} &7秒后开始 请点击报名参加'
+matePvpPrepareAccept: '&8[&a点击参加&8]    '
+matePvpPrepareRefuse: '      &8[&c点击拒绝&8]'
+matePvpNotPrepareMsg: '&8[&a✘&8 &7不在准备阶段 无法参与'
+matePvpAcceptPrepareMsg: '&8[&a✔&8] &a你已报名参加本次公会战 请做好战斗准备'
+matePvpDenyPrepareMsg: '&8[&a✔&8] &4你拒绝参加本次公会战'
+playerDropMsg: '&8[&a✘&8] &7你正在进行公会战,无法丢弃物品'
+playerCraftingMsg: '&8[&a✘&8] &7你正在进行公会战,无法操作该功能'
+
+matePvpTitleMsg: '&8[&a公会战&8]'
+matePvpSubTitleMsg: '&a倒计时 ➜ &a#${time}'
+matePvpSubTitleStartMsg: '&a公会战正式开始'
+noPlayer: '&c参赛人数不足 已取消本次公会战'
+
+# 匹配公会战时间-超时会自动扣血 (设置为0是关闭该功能)
+matePvpTime: 300
+matePvpTimeMsg: '&8[&c!&8] &a你中毒了，原因:你战斗太久了！'
+# 公会战结束提醒
+matePvpFinishSubTitleMsg: '&7公会战获胜方 &a${win} &7公会战失败方 &c${fail}'
+# 公会战结束全服提醒(留空代表不发消息)
+matePvpFinishAllMsg: '&8[&c!&8] &7${win}&7 在公会战中战胜了 &7${fail}&7 &7[&6${win}&7]&7参战成员获得&f[&b贡献*50&f]'
+# 无限火力公会战结束全服提醒(留空代表不发消息)
+matePvpUnlimitedFinishAllMsg: '&8[&c!&8] &7${win}&7 在公会战中战胜了 &7${fail}'
+
+# 公会战奖励
+matePvpWin: 50
+# 会长额外奖励
+matePvpOwnerExtraReward: 0
+matePvpWinMsg: '&7公会战挑战胜利 你获得了胜利奖励 &8[&a贡献×${money}&8]'
+# 执行控制台命令 ${player} 表示玩家
+matePvpWinCommand: [ ]
+matePvpFail: 30
+matePvpFailMsg: '&7公会战挑战失败 你获得了参与奖励 &8[&a贡献×${money}&8]'
+matePvpFailCommand: [ ]
+
+# 公会战开始匹配的发送通知消息
+mateNotice:
+  # 范围 不发 not , 只有op接收 op , 全部玩家 all
+  range: 'all'
+  msg: '&8[&c!&8] &f${guildName} &7发起了${type} &e[点击应战]!'
+
+# 公会战开始后的发送通知消息
+notice:
+  # 范围 不发 not , 只有有权限匹配的接收 permission , 全部玩家 all
+  range: 'all'
+  msg: '&7${one} &fVS &7${two} &f匹配公会战开始了！'
+
+# 赛季公会战
+season:
+  # 场地观看点名称(根据名字匹配观战点)
+  lookLocation: '观看点'
+  noPlayer: '&c参赛公会不足 已取消本次赛季公会战'
+  seasonPvpRemindMsg: '&7赛季公会战 将在今日 &a#${time} &7开始 请做好参赛准备'
+  seasonPvpPrepareMsg: '&7赛季公会战 &a#${time} &7秒后开始 请点击报名参加'
+  endMsg: '&8[&c!&8] &7${win}&7 &7在赛季公会战中获得了第 &a${rank} &7名的成绩，获得奖励, 公会资金:&a${guildMoney}&7,公会活跃:&a${guildActive} &7,&7参战成员获得&f[&b贡献*${playerMoney}&f]'
+  # 胜利奖励
+  reward:
+    # 参赛奖励
+    all:
+      # 公会资金
+      guildMoney: 100
+      # 公会活跃
+      guildActive: 100
+      # 玩家贡献
+      playerMoney: 100
+      # 控制台命令 ${player} 表示玩家
+      command: [ ]
+    # 第三名
+    3:
+      # 公会资金
+      guildMoney: 500
+      # 公会活跃
+      guildActive: 500
+      # 玩家贡献
+      playerMoney: 500
+      # 控制台命令 ${player} 表示玩家
+      command: [ ]
+    # 第二名
+    2:
+      # 公会资金
+      guildMoney: 1000
+      # 公会活跃
+      guildActive: 1000
+      # 玩家贡献
+      playerMoney: 1000
+      # 控制台命令 ${player} 表示玩家
+      command: [ ]
+    # 第一名
+    1:
+      # 公会资金
+      guildMoney: 2000
+      # 公会活跃
+      guildActive: 2000
+      # 玩家贡献
+      playerMoney: 2000
+      # 控制台命令 ${player} 表示玩家
+      command: [ ]
+
+# 积分公会战结算奖励
+scoreMatePvpReward:
+  # 第一名
+  1:
+    # 公会资金
+    guildMoney: 2000
+    # 公会活跃
+    guildActive: 2000
+    # 会长贡献
+    playerMoney: 2000
+    # 控制台命令 ${player} 表示会长, ${guildName} 表示公会, ${rank} 表示名次, ${score} 表示积分
+    command: [ ]
+  # 第二名
+  2:
+    # 公会资金
+    guildMoney: 1000
+    # 公会活跃
+    guildActive: 1000
+    # 会长贡献
+    playerMoney: 1000
+    # 控制台命令 ${player} 表示会长, ${guildName} 表示公会, ${rank} 表示名次, ${score} 表示积分
+    command: [ ]
+  # 第三名
+  3:
+    # 公会资金
+    guildMoney: 500
+    # 公会活跃
+    guildActive: 500
+    # 会长贡献
+    playerMoney: 500
+    # 控制台命令 ${player} 表示会长, ${guildName} 表示公会, ${rank} 表示名次, ${score} 表示积分
+    command: [ ]
+# 积分公会战结算百分比奖励, 30 表示前30%
+scoreMatePvpPercentReward:
+  # 前30%
+  30:
+    # 公会资金
+    guildMoney: 300
+    # 公会活跃
+    guildActive: 300
+    # 会长贡献
+    playerMoney: 300
+    # 控制台命令 ${player} 表示会长, ${guildName} 表示公会, ${rank} 表示名次, ${score} 表示积分
+    command: [ ]
+  # 前50%
+  50:
+    # 公会资金
+    guildMoney: 100
+    # 公会活跃
+    guildActive: 100
+    # 会长贡献
+    playerMoney: 100
+    # 控制台命令 ${player} 表示会长, ${guildName} 表示公会, ${rank} 表示名次, ${score} 表示积分
+    command: [ ]

@@ -1,0 +1,238 @@
+# gui标题
+title: '&0公会神石'
+size: 54
+sound: ''
+
+# 多久执行一次 单位秒
+time: 300
+
+# 神石每级配置
+1:
+  name: '&8[ &f低阶神石 &8]'
+  value: 1
+  price: 1000
+2:
+  name: '&8[ &3高阶神石 &8]'
+  value: 2
+  price: 5000
+3:
+  name: '&8[ &9稀有神石 &8]'
+  value: 3
+  price: 10000
+4:
+  name: '&8[ &d罕见神石 &8]'
+  value: 4
+  price: 20000
+5:
+  name: '&8[ &4传说神石 &8]'
+  value: 5
+  price: 50000
+6:
+  name: '&8[ &e史诗神石 &8]'
+  value: 6
+  price: 100000
+7:
+  name: '&8[ &e神话神石 &8]'
+  value: 7
+  price: 500000
+
+# 神石介绍
+info:
+  index: 13
+  material: NETHER_STAR
+  isEnchant: false
+  hideFlag: true
+  name: '       ${sacred_stone_name}'
+  custom-model-data: 0
+  lore:
+    - ''
+    - '&8▪ &7每 &a#${time} &7秒神石根据公会'
+    - '&8▪ &7当前在线数量增加公会活跃'
+    - '&8▪ &7当前等级'
+    - '&8▪ &8[&a#${nowLevel}&8] &7➜ &8[&a#${nextLevel}&8]'
+    - '&8▪ &7增加公会活跃效率'
+    - '&8▪ &7公会在线玩家[&a*${nowValue}&8] &7➜ &8[&a*${nextValue}&8]'
+    - '&8▪ &7需要支付 &a${price} &7公会资金'
+    - '&8▪ &7目前拥有 &a${money} &7公会资金'
+    - ''
+    - '${button}'
+
+# 返回按钮
+back:
+  enable: true
+  index: 49
+  name: '   &8[&a返回&8]'
+  material: PLAYER_HEAD
+  headBase: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllYTFkODYyNDdmNGFmMzUxZWQxODY2YmNhNmEzMDQwYTA2YzY4MTc3Yzc4ZTQyMzE2YTEwOThlNjBmYjdkMyJ9fX0='
+  isEnchant: false
+  lore:
+    - '&f- &7点击返回'
+  custom-model-data: 0
+
+# 木稿
+woodenPickaxe:
+  enable: true
+  index: 47
+  name: '   &8[&a木稿&8]'
+  material: WOODEN_PICKAXE
+  isEnchant: false
+  lore:
+    - '&f- &7使用木稿进行挖掘'
+    - '&f- &7可获得少量公会矿石'
+    - ''
+    - '&8▪ &7需支付 &a${price} &7贡献'
+    - '&8▪ &7你拥有 &a${money} &7贡献'
+    - ''
+    - '${button}'
+  custom-model-data: 0
+  # 挖掘消耗的玩家公会贡献
+  price: 100
+  # 奖励矿石 10-100个之间
+  ore: '10,100'
+
+# 铁镐
+ironPickaxe:
+  enable: true
+  index: 48
+  name: '   &8[&a铁稿&8]'
+  material: IRON_PICKAXE
+  isEnchant: false
+  lore:
+    - '&f- &7使用铁稿进行挖掘'
+    - '&f- &7可获得中量公会矿石'
+    - ''
+    - '&8▪ &7需支付 &a${price} &7贡献'
+    - '&8▪ &7你拥有 &a${money} &7贡献'
+    - ''
+    - '${button}'
+  custom-model-data: 0
+  # 挖掘消耗的玩家公会贡献
+  price: 500
+  # 奖励矿石 100-500个之间
+  ore: '100,500'
+
+# 金稿
+goldenPickaxe:
+  enable: true
+  index: 50
+  name: '   &8[&a金稿&8]'
+  material: GOLDEN_PICKAXE
+  isEnchant: true
+  lore:
+    - '&f- &7使用金稿进行挖掘'
+    - '&f- &7可获得大量公会矿石'
+    - ''
+    - '&8▪ &7需支付 &a${price} &7贡献'
+    - '&8▪ &7你拥有 &a${money} &7贡献'
+    - ''
+    - '${button}'
+  custom-model-data: 0
+  # 挖掘消耗的玩家公会贡献
+  price: 800
+  # 奖励矿石 100-500个之间
+  ore: '500,800'
+
+# 钻石稿
+diamondPickaxe:
+  enable: true
+  index: 51
+  name: '   &8[&a钻石稿&8]'
+  material: DIAMOND_PICKAXE
+  isEnchant: true
+  lore:
+    - '&f- &7使用钻石稿进行挖掘'
+    - '&f- &7可获得巨量公会矿石'
+    - ''
+    - '&8▪ &7需支付 &a${price} &7贡献'
+    - '&8▪ &7你拥有 &a${money} &7贡献'
+    - ''
+    - '${button}'
+  custom-model-data: 0
+  # 挖掘消耗的玩家公会贡献
+  price: 1000
+  # 奖励矿石 100-500个之间
+  ore: '800,1000'
+
+# 自定义按钮 你可以在这无限扩展你想要的按钮，格式跟这个例子返回一样就好
+custom:
+  # 分隔板
+  pane:
+    enable: true
+    index: 0,1,2,3,4,5,6,7,8,9,18,27,36,45,17,26,35,44,46,52,53
+    material: black_stained_glass_pane
+    isEnchant: false
+    name: '        &8[&7分割板&8]'
+    lore:
+      - '&7哎呀,不要随便戳人家啦'
+    custom-model-data: 0
+
+# buff类型 目前只支持 attribute_plus 或 sx_attribute 或 AttributeSystem 或 MythicLib 或 potionEffect
+buffType: 'attribute_plus'
+
+# 公会buff
+buff:
+  # 自定义buff，可无限制按照格式进行扩展
+  damage:
+    index: 20
+    material: POTION
+    isEnchant: false
+    name: '&f[ &c群体攻击 &f]'
+    custom-model-data: 0
+    lore:
+      - ''
+      - '&8▪ &f当前等级 &8[&a${level}&8]'
+      - ''
+      - '&f[ &c当前属性 &f]'
+      - '&8▪ ${buff}'
+      - ''
+      - '&f[ &c下级属性 &f]'
+      - '&8▪ ${subBuff}'
+      - ''
+      - '${button}'
+    # 真正生效的属性 level 为当前等级变量 ${} 内为运算符,支持 +-*/ 支持数字类型变量
+    attribute:
+      - '&e物理伤害: ${level * 1}'
+    # lore 中 ${buff} 和${subBuff} 显示内容,如未配置该节点显示 attribute里内容
+    display:
+      - '&e物理伤害: ${level * 1}'
+    # 解锁需要的矿石
+    price: '${level * 10000}'
+    # 最大可升级等级
+    maxLevel: 10
+  armor:
+    index: 21
+    material: POTION
+    isEnchant: false
+    name: '&f[ &c群体防御 &f]'
+    custom-model-data: 0
+    lore:
+      - ''
+      - '&8▪ &f当前等级 &8[&a${level}&8]'
+      - ''
+      - '&f[ &c当前属性 &f]'
+      - '&8▪ ${buff}'
+      - ''
+      - '&f[ &c下级属性 &f]'
+      - '&8▪ ${subBuff}'
+      - ''
+      - '${button}'
+    attribute:
+      - '&e物理防御: ${level * 1}'
+    # 解锁需要的矿石
+    price: '${level * 50000}'
+    # 最大可升级等级
+    maxLevel: 10
+
+# 消息提醒
+excavated: '&8[&a✔&8] &7今日已挖掘&e${ore}&7矿石'
+notExcavated: '&8[&a✔&8] &7点击挖掘'
+excavationSuccess: '&8[&a✔&8] &7挖掘成功,本次获取&e${ore}&7矿石'
+notMoneyExcavated: '&8[&c✘&8] &7贡献不足,无法挖掘'
+yesButton: '     &8[&a✔&8] &7点击进行升级'
+noButton: '     &8[&c✘&8] &7公会资金不足'
+maxButton: '      &8[&a✔&8] &7神石已满级'
+succeedMsg: '&a升级神石成功'
+noOre: '&8[&c✘&8] &7公会矿石不足'
+lock: ' &8[&a✔&8] &7会长使用 &a${guild_ore}&7/&a${use_ore} &7矿石解锁'
+maxLevelMsg: '&8[&a✔&8] &7属性已满级'
+maxLevel: '&e已满级'
